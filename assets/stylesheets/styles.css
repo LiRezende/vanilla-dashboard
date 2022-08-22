@@ -1,6 +1,8 @@
-/* General Style */
+/* Theme Font */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Light Default Theme Variables */
 
 :root {
     --color-primary: #7380ec;
@@ -27,6 +29,19 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* Dark Theme Variables */
+
+.dark-theme {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* General Style */
+
 * {
     margin: 0;
     padding: 0;
@@ -43,14 +58,13 @@ html {
 }
 
 body {
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
     color: var(--color-dark);
     font-family: 'Poppins', sans-serif;
     font-size: 0.88rem;
     background-color: var(--color-background);
     user-select: none;
-    overflow-x: hidden;
 }
 
 .container {
@@ -386,6 +400,8 @@ main .recent-orders a {
     margin: 1rem auto;
 }
 
+/* Right Top Bar Style */
+
 .right {
     margin-top: 1.4rem;
 }
@@ -431,6 +447,8 @@ main .recent-orders a {
     display: flex;
     gap: 2rem;
 }
+
+/* Updates and Analytics Cards */
 
 .right .recent-updates {
     margin-top: 1rem;
@@ -531,6 +549,10 @@ main .recent-orders a {
 
 /* Media Queries */
 @media screen and (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .container {
         width: 94%;
         grid-template-columns: 7rem auto 23rem;
